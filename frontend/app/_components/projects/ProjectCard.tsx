@@ -2,7 +2,14 @@
 
 import { motion } from 'framer-motion';
 
-const ProjectCard = ({ project, index }: { project: any; index: number }) => {
+type Project = {
+  id: string | number;
+  title: string;
+  description: string;
+  tags: string[];
+};
+
+const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
