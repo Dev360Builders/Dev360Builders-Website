@@ -3,7 +3,13 @@
 import { motion } from 'framer-motion';
 import SectionHeader from './SectionHeader';
 
-const values = [
+type Value = {
+  title: string;
+  description: string;
+  icon: string;
+};
+
+const values: Value[] = [
   { 
     title: "Innovation", 
     description: "We push boundaries and explore new technologies to deliver cutting-edge solutions.",
@@ -47,7 +53,7 @@ const CoreValues = () => {
   );
 };
 
-const ValueCard = ({ value, index }: { value: any; index: number }) => (
+const ValueCard = ({ value, index }: { value: Value; index: number }) => (
   <motion.div
     className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700"
     initial={{ opacity: 0, y: 50 }}

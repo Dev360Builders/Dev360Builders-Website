@@ -35,7 +35,7 @@ const AboutHero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            We're a team of passionate creators, developers, and visionaries dedicated to transforming ideas into revolutionary digital experiences.
+            We&apos;re a team of passionate creators, developers, and visionaries dedicated to transforming ideas into revolutionary digital experiences.
           </motion.p>
           
           <motion.div 

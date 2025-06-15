@@ -3,7 +3,14 @@
 import { motion } from 'framer-motion';
 import SectionHeader from './SectionHeader';
 
-const teamMembers = [
+type TeamMember = {
+  name: string;
+  role: string;
+  bio: string;
+  color: string;
+};
+
+const teamMembers: TeamMember[] = [
   { 
     name: "Alex Morgan", 
     role: "CEO & Founder", 
@@ -51,7 +58,7 @@ const TeamSection = () => {
   );
 };
 
-const TeamMemberCard = ({ member, index }: { member: any; index: number }) => (
+const TeamMemberCard = ({ member, index }: { member: TeamMember; index: number }) => (
   <motion.div
     className="relative"
     initial={{ opacity: 0, y: 50 }}
@@ -76,7 +83,7 @@ const TeamMemberCard = ({ member, index }: { member: any; index: number }) => (
         ease: "linear" 
       }}
       style={{
-        // @ts-ignore
+        // @ts-expect-error
         "--tw-gradient-stops": `var(--tw-gradient-from), var(--tw-gradient-to)`,
         "--tw-gradient-from": member.color.split(' ')[0].replace('from-', ''),
         "--tw-gradient-to": member.color.split(' ')[1].replace('to-', ''),
@@ -120,7 +127,7 @@ const SocialLinks = () => (
     >
       <span>📱</span>
     </motion.a>
-  </div>
+      </div>
 );
 
 export default TeamSection;

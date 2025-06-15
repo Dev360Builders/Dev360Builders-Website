@@ -13,7 +13,7 @@ const AboutCTA = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Build Something Amazing?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can transform your vision into a cutting-edge digital solution.
+            Let&apos;s discuss how we can transform your vision into a cutting-edge digital solution.
           </p>
           
           <motion.button
