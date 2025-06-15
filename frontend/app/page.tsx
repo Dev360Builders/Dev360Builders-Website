@@ -5,7 +5,7 @@ import WorkTogether from "./_components/WorkTogether";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
       <Navbar />
       <Hero />
       <WorkTogether />

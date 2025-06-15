@@ -27,7 +27,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 overflow-hidden">
+    <div className="relative min-h-screen flex justify-center flex-col items-center overflow-hidden">
       <div className="absolute top-0 right-0 w-full h-full overflow-hidden">
         <div
           ref={blobRef1}

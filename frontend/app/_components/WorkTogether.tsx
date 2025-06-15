@@ -38,7 +38,7 @@ const WorkTogether = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-6 relative overflow-hidden">
+    <div className="min-h-screen py-20 px-4 sm:px-6 relative overflow-hidden">
       {/* Floating decorative elements */}
       <div className="absolute top-20 left-10 w-40 h-40 bg-blue-500 rounded-full mix-blend-multiply filter blur-[90px] opacity-20"></div>
       <div className="absolute bottom-40 right-20 w-60 h-60 bg-purple-500 rounded-full mix-blend-multiply filter blur-[100px] opacity-20"></div>

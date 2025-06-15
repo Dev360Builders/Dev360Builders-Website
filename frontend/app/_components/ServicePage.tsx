@@ -206,7 +206,7 @@ export default function ServicesPage() {
       : services.filter((service) => service.category === activeTab);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-blue-50 py-20 px-4 sm:px-6 relative overflow-hidden">
+    <div className="min-h-screen py-20 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
         <div
           ref={blobRef1}

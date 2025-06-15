@@ -26,7 +26,7 @@ export default function ServiceItem({ title, description, icon, color, index }) 
         scale: 1.03,
         boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
       }}
-      className="relative bg-white rounded-xl p-8 overflow-hidden transition-all duration-300"
+      className="relative bg-transparent rounded-xl p-8 overflow-hidden transition-all duration-300"
     >
       <motion.div
         className="mb-6"
@@ -53,7 +53,7 @@ export default function ServiceItem({ title, description, icon, color, index }) 
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
         }}
         whileTap={{ scale: 0.95 }}
-        className="text-white px-5 py-2 rounded-lg font-medium"
+        className="text-black px-5 py-2 rounded-lg font-medium"
         style={{ backgroundImage: color }}
       >
         Learn More
