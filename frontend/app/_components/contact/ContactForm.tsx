@@ -3,25 +3,17 @@
 import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setIsError(false);
-
-    if (!recaptchaToken) {
-      setIsError(true);
-      setIsSubmitting(false);
-      return;
-    }
 
     if (form.current) {
       emailjs.sendForm(
@@ -123,13 +115,6 @@ const ContactForm = () => {
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             required
           ></textarea>
-        </div>
-        
-        <div className="mb-4">
-          <ReCAPTCHA
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-            onChange={(token: string | null) => setRecaptchaToken(token)}
-          />
         </div>
         
         <motion.button
