@@ -63,7 +63,7 @@ const Footer = () => {
                 { name: 'Projects', href: '/projects' },
                 { name: 'Pricing', href: '/pricing' },
                 { name: 'Contact', href: '/contact' }
-              ].map((link, index) => (
+              ].map((link) => (
                 <motion.li
                   key={link.name}
                   whileHover={{ x: 5 }}
@@ -93,7 +93,7 @@ const Footer = () => {
                 'Web3 Development',
                 'AI Solutions',
                 'Cybersecurity'
-              ].map((service, index) => (
+              ].map((service) => (
                 <motion.li
                   key={service}
                   whileHover={{ x: 5 }}
@@ -163,7 +163,7 @@ const Footer = () => {
               { name: 'Privacy Policy', href: '/privacy' },
               { name: 'Terms of Service', href: '/terms' },
               { name: 'Cookie Policy', href: '/cookies' }
-            ].map((link, index) => (
+            ].map((link) => (
               <motion.a
                 key={link.name}
                 href={link.href}
