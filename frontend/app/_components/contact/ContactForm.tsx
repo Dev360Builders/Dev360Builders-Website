@@ -56,7 +56,7 @@ const ContactForm = () => {
       
       {isSuccess ? (
         <div className="p-4 mb-6 rounded-lg bg-green-100 text-green-800">
-          Thank you! Your message has been sent successfully. We'll get back to you soon.
+          Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
         </div>
       ) : isError ? (
         <div className="p-4 mb-6 rounded-lg bg-red-100 text-red-800">
