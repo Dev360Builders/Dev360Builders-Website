@@ -1,6 +1,7 @@
 import AboutPage from "./_components/AboutPage";
 import Hero from "./_components/Hero";
 import Navbar from "./_components/Navbar";
+import ProjectShowcase from "./_components/ProjectShowcase";
 import ServicesPage from "./_components/ServicePage";
 import WorkTogether from "./_components/WorkTogether";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <WorkTogether />
       <ServicesPage />
       <AboutPage />
+      {/* <ProjectShowcase /> */}
       
       {/* Add other sections here */}
       <div className="h-screen"></div> {/* Placeholder for next section */}
