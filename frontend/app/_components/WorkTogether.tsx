@@ -59,7 +59,7 @@ const WorkTogether = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
               variants={itemVariants}
             >
-              Let's Create Something <span className="text-blue-600">Extraordinary</span> Together
+              Let&apos;s Create Something <span className="text-blue-600">Extraordinary</span> Together
             </motion.h2>
             
             <motion.p 
@@ -67,7 +67,7 @@ const WorkTogether = () => {
               variants={itemVariants}
             >
               Your vision, our expertise. Whether you need a stunning web presence, 
-              a powerful mobile app, or cutting-edge AI solutions - we've got you covered.
+              a powerful mobile app, or cutting-edge AI solutions - we&apos;ve got you covered.
             </motion.p>
             
             <motion.div 
