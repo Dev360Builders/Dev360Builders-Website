@@ -14,7 +14,7 @@ declare module 'react-google-recaptcha' {
     isolated?: boolean;
     className?: string;
     style?: React.CSSProperties;
-    grecaptcha?: any;
+    grecaptcha?: unknown;
     asyncScriptOnLoad?: () => void;
   }
 

@@ -18,9 +18,6 @@ export default function Home() {
       <ProjectShowcase />
       <PricingPage />
       <ContactPage />
-      
-      {/* Add other sections here */}
-      <div className="h-screen"></div> {/* Placeholder for next section */}
     </div>
   );
 }

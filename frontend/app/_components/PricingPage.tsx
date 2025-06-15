@@ -3,6 +3,26 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
+
+type Plan = {
+  id: string;
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  cta: string;
+  featured?: boolean;
+};
+
+type PricingCardProps = {
+  plan: Plan;
+  index: number;
+  hoveredPlan: string | null;
+  setHoveredPlan: (id: string | null) => void;
+  billingCycle: 'monthly' | 'annual';
+};
+
 const PricingPage = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
   const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
@@ -194,7 +214,7 @@ const PricingPage = () => {
               },
               {
                 question: "Is there a free trial available?",
-                answer: "We don't offer free trials, but we provide a 14-day money-back guarantee on all plans."
+                answer: "We do not offer free trials, but we provide a 14-day money-back guarantee on all plans."
               },
               {
                 question: "How are extra hours billed?",
@@ -217,7 +237,13 @@ const PricingPage = () => {
   );
 };
 
-const PricingCard = ({ plan, index, hoveredPlan, setHoveredPlan, billingCycle }: any) => {
+const PricingCard = ({
+  plan,
+  index,
+  hoveredPlan,
+  setHoveredPlan,
+  billingCycle,
+}: PricingCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -281,7 +307,7 @@ const PricingCard = ({ plan, index, hoveredPlan, setHoveredPlan, billingCycle }:
         </div>
         
         <div className="border-t border-gray-200 p-8 bg-gray-50 flex-grow">
-          <h4 className="font-medium text-gray-900 mb-4">What's included:</h4>
+          <h4 className="font-medium text-gray-900 mb-4">What&apos;s included:</h4>
           <ul className="space-y-3">
             {plan.features.map((feature: string, i: number) => (
               <li key={i} className="flex items-start">

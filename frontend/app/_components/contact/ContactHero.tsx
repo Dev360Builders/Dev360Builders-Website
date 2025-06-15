@@ -28,7 +28,7 @@ const ContactHero = () => {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           >
-            Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Build</span> Together
+            Let&apos;s <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Build</span> Together
           </motion.h1>
           
           <motion.p
@@ -37,7 +37,7 @@ const ContactHero = () => {
             transition={{ delay: 0.5, duration: 0.7 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Have a project in mind or want to discuss how we can help? Reach out and we'll get back to you within 24 hours.
+            Have a project in mind or want to discuss how we can help? Reach out and we&apos;ll get back to you within 24 hours.
           </motion.p>
         </motion.div>
       </div>
