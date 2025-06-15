@@ -83,7 +83,7 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember; index: number }
         ease: "linear" 
       }}
       style={{
-        // @ts-expect-error
+        // @ts-expect-error: CSS custom properties are not typed in React style prop
         "--tw-gradient-stops": `var(--tw-gradient-from), var(--tw-gradient-to)`,
         "--tw-gradient-from": member.color.split(' ')[0].replace('from-', ''),
         "--tw-gradient-to": member.color.split(' ')[1].replace('to-', ''),
