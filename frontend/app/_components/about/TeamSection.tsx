@@ -2,38 +2,45 @@
 
 import { motion } from 'framer-motion';
 import SectionHeader from './SectionHeader';
+import { Link, LinkedinIcon, X } from 'lucide-react';
 
 type TeamMember = {
   name: string;
   role: string;
   bio: string;
   color: string;
+  image: string;
+  socials: {
+    twitter?: string;
+    linkedin?: string;
+    website?: string;
+  };
 };
 
 const teamMembers: TeamMember[] = [
   { 
-    name: "Alex Morgan", 
+    name: "Richard Winner Duvor", 
     role: "CEO & Founder", 
-    bio: "10+ years in software architecture. Passionate about blockchain and AI convergence.",
-    color: "from-blue-500 to-cyan-500"
+    bio: "6+ years in software architecture. Passionate about blockchain and AI convergence.",
+    color: "from-blue-500 to-cyan-500",
+    image: "/team/avatar.jpg",
+    socials: {
+      twitter: "X: https://x.com/dr_winner6",
+      linkedin: "https://www.linkedin.com/in/richard-winner-duvor/",
+      website: "https://richardduvor.com"
+    }
   },
   { 
-    name: "Sarah Chen", 
-    role: "Lead Designer", 
+    name: "Alikamatu Osama", 
+    role: "Senior Developer", 
     bio: "Design thinking advocate. Creates interfaces that blend aesthetics with functionality.",
-    color: "from-purple-500 to-fuchsia-500"
-  },
-  { 
-    name: "Marcus Johnson", 
-    role: "CTO", 
-    bio: "Full-stack expert. Believes in robust, scalable systems that stand the test of time.",
-    color: "from-amber-500 to-orange-500"
-  },
-  { 
-    name: "Elena Rodriguez", 
-    role: "AI Research Lead", 
-    bio: "Machine learning PhD. Builds intelligent systems that learn and adapt.",
-    color: "from-emerald-500 to-teal-500"
+    color: "from-purple-500 to-fuchsia-500",
+    image: "/team/osama.jpeg",
+    socials: {
+      twitter: "https://twitter.com/alikamatuosama",
+      linkedin: "https://linkedin.com/in/alikamatuosama",
+      website: "https://portfolio-rust-xi-66.vercel.app/"
+    }
   }
 ];
 
@@ -48,7 +55,7 @@ const TeamSection = () => {
           description="Passionate experts dedicated to turning your vision into reality"
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {teamMembers.map((member, index) => (
             <TeamMemberCard key={index} member={member} index={index} />
           ))}
@@ -92,42 +99,61 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember; index: number }
     
     <div className="relative bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 h-full border border-gray-700 overflow-hidden">
       <div className="flex justify-center mb-6">
-        <div className="bg-gray-200 border-2 border-dashed rounded-full w-32 h-32" />
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-32 h-32 object-cover rounded-full border-4 border-gray-700 shadow-lg"
+        />
       </div>
       
       <h3 className="text-2xl font-bold text-center mb-1">{member.name}</h3>
       <p className="text-center text-cyan-400 mb-4">{member.role}</p>
       <p className="text-gray-400 text-center">{member.bio}</p>
       
-      <SocialLinks />
+      <SocialLinks socials={member.socials} />
     </div>
   </motion.div>
 );
 
-const SocialLinks = () => (
+const SocialLinks = ({ socials }: { socials: TeamMember['socials'] }) => (
   <div className="flex justify-center mt-6 space-x-4">
-    <motion.a 
-      whileHover={{ y: -5 }} 
-      href="#" 
-      className="bg-gray-700 p-2 rounded-full"
-    >
-      <span>🐦</span>
-    </motion.a>
-    <motion.a 
-      whileHover={{ y: -5 }} 
-      href="#" 
-      className="bg-gray-700 p-2 rounded-full"
-    >
-      <span>💼</span>
-    </motion.a>
-    <motion.a 
-      whileHover={{ y: -5 }} 
-      href="#" 
-      className="bg-gray-700 p-2 rounded-full"
-    >
-      <span>📱</span>
-    </motion.a>
-      </div>
+    {socials.twitter && (
+      <motion.a 
+        whileHover={{ y: -5 }} 
+        href={socials.twitter} 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gray-700 p-2 rounded-full"
+        aria-label="Twitter"
+      >
+        <span><X /></span>
+      </motion.a>
+    )}
+    {socials.linkedin && (
+      <motion.a 
+        whileHover={{ y: -5 }} 
+        href={socials.linkedin} 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gray-700 p-2 rounded-full"
+        aria-label="LinkedIn"
+      >
+        <span><LinkedinIcon /></span>
+      </motion.a>
+    )}
+    {socials.website && (
+      <motion.a 
+        whileHover={{ y: -5 }} 
+        href={socials.website} 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gray-700 p-2 rounded-full"
+        aria-label="Website"
+      >
+        <span><Link /></span>
+      </motion.a>
+    )}
+  </div>
 );
 
 export default TeamSection;

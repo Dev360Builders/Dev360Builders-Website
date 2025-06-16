@@ -97,9 +97,8 @@ const WorkTogether = () => {
               variants={containerVariants}
             >
               {[
-                { value: "200+", label: "Projects" },
-                { value: "15+", label: "Experts" },
-                { value: "98%", label: "Satisfaction" },
+                { value: "20+", label: "Projects" },
+                { value: "100%", label: "Satisfaction" },
                 { value: "24/7", label: "Support" }
               ].map((stat, index) => (
                 <motion.div 
@@ -125,7 +124,7 @@ const WorkTogether = () => {
                 animate={{ y: [0, -15, 0] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               >
-                <div className="bg-gray-200 border-2 border-dashed rounded-2xl w-full h-96 md:h-[500px] overflow-hidden" />
+                <div className="bg-[url('/hero/together.png')] bg-cover border-2 border-dashed rounded-2xl w-full h-96 md:h-[500px] overflow-hidden" />
               </motion.div>
               
               {/* Floating elements around the image */}

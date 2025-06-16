@@ -75,9 +75,9 @@ const HeroImage = () => (
     className="relative"
   >
     <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-600 blur-2xl opacity-30"></div>
-    <div className="relative bg-gray-200 border-2 border-dashed rounded-3xl w-full h-96 md:h-[500px] overflow-hidden" />
-    
-    <motion.div 
+    <div className="relative bg-[url('/hero/future.png')] bg-cover rounded-full w-full h-96 md:h-[600px]" />
+
+    <motion.div
       className="absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-orange-500 w-32 h-32 rounded-2xl shadow-2xl flex items-center justify-center"
       animate={{ 
         rotate: [0, 10, 0, -10, 0],

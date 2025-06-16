@@ -118,10 +118,10 @@ export default function Hero() {
             }}
             className="relative"
           >
-            <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-blue-400 to-indigo-400 blur-xl opacity-30"></div>
-            <div className="relative bg-gradient-to-br from-gray-200 to-blue-100 border-2 border-dashed rounded-xl w-full h-96 md:h-[500px] overflow-hidden flex items-center justify-center">
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 blur-xl opacity-30"></div>
+            <div className="relative bg-transparent from-gray-200 to-blue-100 w-full h-96 md:h-[500px] flex items-center justify-center">
               <motion.img
-                src="https://images.unsplash.com/photo-1726137570714-68c4d227b6b7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+                src="/hero/hero.png"
                 alt="Hero Illustration"
                 className="w-3/4 h-auto object-contain"
                 animate={{ scale: [1, 1.05, 1] }}
