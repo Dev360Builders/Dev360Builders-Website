@@ -19,7 +19,7 @@ export default function ServiceTabs({ onTabChange }) {
   };
 
   return (
-    <div className="flex justify-center gap-6 mb-16">
+    <div className="flex justify-center gap-6 mb-16 text-sm md:text-base">
       {tabs.map((tab) => (
         <motion.button
           key={tab.id}
