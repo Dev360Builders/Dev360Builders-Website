@@ -23,7 +23,7 @@ const teamMembers: TeamMember[] = [
     role: "CEO & Founder", 
     bio: "6+ years in software architecture. Passionate about blockchain and AI convergence.",
     color: "from-blue-500 to-cyan-500",
-    image: "/team/avatar.jpg",
+    image: "/team/IMG_2488.JPEG",
     socials: {
       twitter: "X: https://x.com/dr_winner6",
       linkedin: "https://www.linkedin.com/in/richard-winner-duvor/",

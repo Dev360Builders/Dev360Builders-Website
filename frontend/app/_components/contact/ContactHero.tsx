@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const ContactHero = () => {
   return (
-    <section className="relative pt-32 pb-20 px-4 sm:px-6">
+    <section className="relative pt-32 pb-20 px-4 sm:px-6 text-black">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

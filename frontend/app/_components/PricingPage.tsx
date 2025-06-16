@@ -130,7 +130,7 @@ const PricingPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.7 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black"
           >
             Simple, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Transparent</span> Pricing
           </motion.h1>
@@ -200,7 +200,7 @@ const PricingPage = () => {
           transition={{ duration: 0.7 }}
           className="mt-32 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">Frequently Asked Questions</h2>
           
           <div className="space-y-4">
             {[
@@ -226,7 +226,7 @@ const PricingPage = () => {
                 whileHover={{ y: -2 }}
                 className="bg-white rounded-xl p-6 shadow-sm border border-gray-200"
               >
-                <h3 className="font-bold text-lg mb-2">{item.question}</h3>
+                <h3 className="font-bold text-lg mb-2 text-black">{item.question}</h3>
                 <p className="text-gray-600">{item.answer}</p>
               </motion.div>
             ))}

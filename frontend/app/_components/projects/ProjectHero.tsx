@@ -60,16 +60,19 @@ const HeroProjectShowcase = () => (
     <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-blue-500 to-purple-500 blur-2xl opacity-20"></div>
     <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200">
       <div className="aspect-w-16 aspect-h-9 bg-gray-200">
-        {/* Project preview would go here */}
-        <div className="w-full h-full flex items-center justify-center">
-          <span className="text-2xl font-medium text-gray-500">Project Showcase</span>
-        </div>
+        <motion.img
+          src="/projects/mint.png"
+          alt="Project Showcase"
+          className="w-full h-full object-cover"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }} />
       </div>
       <div className="p-8">
         <div className="flex justify-between items-start">
           <div>
-            <h3 className="text-2xl font-bold mb-2">E-commerce Platform</h3>
-            <p className="text-gray-600">Next.js, Node.js, MongoDB</p>
+            <h3 className="text-2xl font-bold mb-2">MintedIn</h3>
+            <p className="text-gray-600">Next.js, Node.js, Motoko, Web3</p>
           </div>
           <motion.button
             whileHover={{ scale: 1.05 }}

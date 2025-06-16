@@ -42,7 +42,7 @@ const ContactForm = () => {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
-      className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200"
+      className="bg-white text-black rounded-2xl shadow-xl p-8 border border-gray-200"
     >
       <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
       

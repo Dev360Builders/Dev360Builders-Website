@@ -70,7 +70,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimoni
     <div className="mb-6 text-5xl text-cyan-400">&quot;</div>
     <p className="text-lg text-gray-300 mb-8">{testimonial.quote}</p>
     <div className="flex items-center">
-      <div className="bg-gray-200 border-2 border-dashed rounded-full w-12 h-12 mr-4"></div>
+      {/* <div className="bg-gray-200 border-2 border-dashed rounded-full w-12 h-12 mr-4"></div> */}
       <div>
         <h4 className="font-bold">{testimonial.author}</h4>
         <p className="text-gray-400 text-sm">{testimonial.role}</p>
