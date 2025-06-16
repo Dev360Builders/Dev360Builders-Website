@@ -72,6 +72,7 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember; index: number }
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
+    id='team'
   >
     <motion.div
       className="absolute inset-0 bg-gradient-to-br rounded-2xl opacity-70"

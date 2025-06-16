@@ -9,8 +9,7 @@ import AboutCTA from './about/AboutCTA';
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen text-white overflow-hidden">
-      {/* Floating particles background */}
+    <div className="min-h-screen text-white overflow-hidden" id='about'>
       <FloatingParticles />
       
       <AboutHero />

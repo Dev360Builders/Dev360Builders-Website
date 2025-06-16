@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 export default function Navbar() {
   const navItems = [
     { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Portfolio', href: '#projects' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];

@@ -8,7 +8,7 @@ import ContactMap from './contact/ContactMap';
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100" id='contact'>
       {/* Floating background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(10)].map((_, i) => (

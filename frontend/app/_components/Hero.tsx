@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { TypeAnimation } from 'react-type-animation';
+import Link from 'next/link';
 
 export default function Hero() {
   const blobRef1 = useRef(null);
@@ -83,7 +84,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all text-lg"
             >
-              Start a Project
+              <Link href="#contact">Start a Project</Link>
             </motion.button>
             <motion.button
               whileHover={{
@@ -95,7 +96,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full font-semibold transition-all text-lg"
             >
-              View Our Work
+              <Link href="#projects">View Our Work</Link>
             </motion.button>
           </div>
         </motion.div>
