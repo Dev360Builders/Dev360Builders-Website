@@ -83,6 +83,7 @@ export default function Navbar() {
           ))}
         </div>
 
+        <Link href="#contact">
         <motion.button
           whileHover={{
             scale: 1.1,
@@ -94,6 +95,7 @@ export default function Navbar() {
         >
           Get Started
         </motion.button>
+        </Link>
 
         <div className="md:hidden">
           <button onClick={toggleMenu} className="flex flex-col space-y 1.5">

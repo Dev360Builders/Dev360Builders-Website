@@ -19,12 +19,12 @@ export default function ServiceTabs({ onTabChange }) {
   };
 
   return (
-    <div className="flex justify-center gap-6 mb-16 text-sm md:text-base">
+    <div className="flex justify-center gap-1 md:gap-6 mb-16 text-sm md:text-base">
       {tabs.map((tab) => (
         <motion.button
           key={tab.id}
           onClick={() => handleTabClick(tab.id)}
-          className={`relative px-4 py-2 font-semibold text-gray-700 transition-colors text-sm md:textlg ${
+          className={` relative px-2 md:px-4 py-2 md:font-semibold text-gray-700 transition-colors text-sm md:textlg ${
             activeTab === tab.id ? 'text-blue-600' : 'hover:text-gray-900'
           }`}
           whileHover={{ scale: 1.05 }}
