@@ -60,7 +60,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.3 }}
           ></motion.div>
           <span className="font-extrabold text-2xl text-gray-900 tracking-tight">
-            Dev360
+            <img src="/icons/devicon.png" alt="Dev360 Builders Logo" className='w-full h-8' />
           </span>
         </div>
 
