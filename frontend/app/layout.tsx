@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: "https://dev360builders.tech/about",
     images: [
       {
-        url: "https://dev360builders.tech/og-image.jpg",
+        url: "https://dev360-builders-website.vercel.app/icons/devicon.png",
         width: 1200,
         height: 630,
         alt: "Dev360 Builders Team"
