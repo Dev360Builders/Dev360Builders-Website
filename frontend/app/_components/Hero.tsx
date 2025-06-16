@@ -75,6 +75,7 @@ export default function Hero() {
           </motion.p>
 
           <div className="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+            <Link href="#contact">
             <motion.button
               whileHover={{
                 scale: 1.1,
@@ -84,8 +85,10 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all text-lg"
             >
-              <Link href="#contact">Start a Project</Link>
+                Start a Project
             </motion.button>
+            </Link>
+            <Link href="#projects">
             <motion.button
               whileHover={{
                 scale: 1.1,
@@ -96,8 +99,9 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full font-semibold transition-all text-lg"
             >
-              <Link href="#projects">View Our Work</Link>
+                View Our Work
             </motion.button>
+            </Link>
           </div>
         </motion.div>
 

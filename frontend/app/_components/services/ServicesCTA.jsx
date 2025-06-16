@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useInView } from 'react-intersection-observer';
+import Link from 'next/link';
 
 export default function ServicesCTA() {
   const ctaRef = useRef(null);
@@ -35,7 +36,8 @@ export default function ServicesCTA() {
           Let’s discuss how our cutting-edge solutions can help you achieve your business goals.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <motion.button
+          <Link href="#contact" passHref>
+            <motion.button
             whileHover={{
               scale: 1.05,
               boxShadow: '0 0 15px rgba(255, 255, 255, 0.3)',
@@ -45,7 +47,10 @@ export default function ServicesCTA() {
           >
             Start a Project
           </motion.button>
-          <motion.button
+          </Link>
+
+          <Link href="#team" passHref>
+                    <motion.button
             whileHover={{
               scale: 1.05,
               borderColor: '#ffffff',
@@ -56,6 +61,7 @@ export default function ServicesCTA() {
           >
             Schedule a Call
           </motion.button>
+          </Link>
         </div>
       </div>
     </motion.div>

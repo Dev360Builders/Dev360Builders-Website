@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, easeOut, easeInOut } from 'framer-motion';
+import Link from 'next/link';
 import { useRef } from 'react';
 
 const WorkTogether = () => {
@@ -74,21 +75,25 @@ const WorkTogether = () => {
               className="mt-10 flex flex-wrap gap-4"
               variants={itemVariants}
             >
-              <motion.button
+              <Link href="#contact">
+                            <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all"
               >
                 Start Your Project
               </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-gray-900 border-2 border-gray-200 px-8 py-4 rounded-xl font-bold text-lg shadow-md hover:shadow-lg transition-all"
-              >
-                Schedule a Call
-              </motion.button>
+              </Link>
+
+              <Link href="#team">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-gray-900 border-2 border-gray-200 px-8 py-4 rounded-xl font-bold text-lg shadow-md hover:shadow-lg transition-all"
+                >
+                  Schedule a Call
+                </motion.button>
+              </Link>
             </motion.div>
             
             {/* Stats section */}

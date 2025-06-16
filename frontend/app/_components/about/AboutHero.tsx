@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const AboutHero = () => {
   return (
@@ -44,13 +45,16 @@ const AboutHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
+            <Link href='#team'>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 rounded-xl font-bold text-lg shadow-lg"
-            >
+              >
               Meet Our Team
             </motion.button>
+              </Link>
+            <Link href='#projects'>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -58,6 +62,7 @@ const AboutHero = () => {
             >
               View Projects
             </motion.button>
+          </Link>
           </motion.div>
         </motion.div>
         

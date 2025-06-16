@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
-const ProjectCategories = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  
+type Props = {
+  activeCategory: string;
+  setActiveCategory: (cat: string) => void;
+};
+
+const ProjectCategories = ({ activeCategory, setActiveCategory }: Props) => {
   const categories = [
     { id: 'all', name: 'All Projects' },
     { id: 'web', name: 'Web Development' },

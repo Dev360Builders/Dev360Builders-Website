@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const ProjectCTA = () => {
   return (
@@ -23,6 +24,7 @@ const ProjectCTA = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href='#team'>
               <motion.button
                 whileHover={{ 
                   scale: 1.05,
@@ -30,9 +32,11 @@ const ProjectCTA = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg shadow-lg"
-              >
+                >
                 Get a Free Consultation
               </motion.button>
+                </Link>
+              <Link href="#pricing">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -40,6 +44,7 @@ const ProjectCTA = () => {
               >
                 View Pricing
               </motion.button>
+              </Link>
             </div>
           </div>
         </motion.div>

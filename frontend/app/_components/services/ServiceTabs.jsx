@@ -24,7 +24,7 @@ export default function ServiceTabs({ onTabChange }) {
         <motion.button
           key={tab.id}
           onClick={() => handleTabClick(tab.id)}
-          className={`relative px-4 py-2 font-semibold text-lg text-gray-700 transition-colors ${
+          className={`relative px-4 py-2 font-semibold text-gray-700 transition-colors text-sm md:textlg ${
             activeTab === tab.id ? 'text-blue-600' : 'hover:text-gray-900'
           }`}
           whileHover={{ scale: 1.05 }}

@@ -25,7 +25,7 @@ const Footer = () => {
             <p className="mb-6">
               Building digital excellence through innovative solutions and cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               {[
                 'twitter',
                 'linkedin',
@@ -44,7 +44,7 @@ const Footer = () => {
                   <div className="w-5 h-5 bg-gray-400 rounded"></div>
                 </motion.a>
               ))}
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Quick Links */}
@@ -58,11 +58,11 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 { name: 'Home', href: '/' },
-                { name: 'About Us', href: '/about' },
-                { name: 'Services', href: '/services' },
-                { name: 'Projects', href: '/projects' },
-                { name: 'Pricing', href: '/pricing' },
-                { name: 'Contact', href: '/contact' }
+                { name: 'About Us', href: '#about' },
+                { name: 'Services', href: '#services' },
+                { name: 'Projects', href: '#projects' },
+                { name: 'Pricing', href: '#pricing' },
+                { name: 'Contact', href: '#contact' }
               ].map((link) => (
                 <motion.li
                   key={link.name}

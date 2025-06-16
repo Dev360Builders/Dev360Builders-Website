@@ -54,7 +54,16 @@ const projects = [
   },
 ];
 
-const ProjectGrid = () => {
+type Props = {
+  activeCategory: string;
+};
+
+const ProjectGrid = ({ activeCategory }: Props) => {
+  const filteredProjects =
+    activeCategory === 'all'
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
+
   return (
     <section className="py-16 px-4 sm:px-6 relative z-10">
       <div className="max-w-7xl mx-auto">
@@ -65,7 +74,7 @@ const ProjectGrid = () => {
           transition={{ duration: 0.7 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <ProjectCard 
               key={project.id}
               project={project}

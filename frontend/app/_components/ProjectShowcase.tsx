@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectHero from './projects/ProjectHero';
 import ProjectGrid from './projects/ProjectGrid';
@@ -8,13 +9,15 @@ import ProjectTestimonials from './projects/ProjectTestimonials';
 import ProjectCTA from './projects/ProjectCTA';
 
 const ProjectShowcase = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-gray-900 overflow-hidden" id='projects'>
       <AnimatedBackground />
       
       <ProjectHero />
-      <ProjectCategories />
-      <ProjectGrid />
+      <ProjectCategories activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+      <ProjectGrid activeCategory={activeCategory} />
       <ProjectTestimonials />
       <ProjectCTA />
     </div>

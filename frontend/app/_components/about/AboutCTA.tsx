@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const AboutCTA = () => {
   return (
@@ -15,7 +16,7 @@ const AboutCTA = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Let&apos;s discuss how we can transform your vision into a cutting-edge digital solution.
           </p>
-          
+          <Link href="#contact">
           <motion.button
             whileHover={{ 
               scale: 1.05,
@@ -26,6 +27,7 @@ const AboutCTA = () => {
           >
             Start Your Project Now
           </motion.button>
+          </Link>
         </motion.div>
       </div>
     </div>
