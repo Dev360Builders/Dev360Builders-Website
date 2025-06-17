@@ -90,7 +90,6 @@ export default function Navbar() {
             backgroundImage: 'linear-gradient(to right, #3b82f6, #8b5cf6)',
             boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)',
           }}
-          whileTap={{ scale: 0.95 }}
           className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg transition-all"
         >
           Get Started
