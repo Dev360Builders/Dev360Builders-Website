@@ -17,10 +17,10 @@ const ContactForm = () => {
 
     if (form.current) {
       emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        process.env.service_5sqxpy8!,
+        process.env.template_bfx0s7n!,
         form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        process.env.UKSrLsFs4mokLUnJKHZDh!
       )
       .then((result) => {
         console.log(result.text);
