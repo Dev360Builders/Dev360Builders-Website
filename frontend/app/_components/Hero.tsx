@@ -82,7 +82,6 @@ export default function Hero() {
                 backgroundImage: 'linear-gradient(to right, #3b82f6, #8b5cf6)',
                 boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)',
               }}
-              whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all text-lg"
             >
                 Start a Project
@@ -96,7 +95,6 @@ export default function Hero() {
                 color: '#3b82f6',
                 boxShadow: '0 0 15px rgba(59, 130, 246, 0.3)',
               }}
-              whileTap={{ scale: 0.95 }}
               className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full font-semibold transition-all text-lg"
             >
                 View Our Work
