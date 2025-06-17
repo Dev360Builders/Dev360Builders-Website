@@ -62,7 +62,7 @@ export default function Hero() {
             ]}
             wrapper="h1"
             speed={50}
-            className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight"
+            className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight h-16 md:h-32"
             repeat={Infinity}
           />
           <motion.p
@@ -75,19 +75,19 @@ export default function Hero() {
           </motion.p>
 
           <div className="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-            <Link href="#contact">
+            <Link href="#contact" className='z-50 inset-1'>
             <motion.button
               whileHover={{
                 scale: 1.1,
                 backgroundImage: 'linear-gradient(to right, #3b82f6, #8b5cf6)',
                 boxShadow: '0 0 15px rgba(59, 130, 246, 0.5)',
               }}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all text-lg"
+              className="bg-gradient-to-r  z-50 inset-1 from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all text-lg"
             >
                 Start a Project
             </motion.button>
             </Link>
-            <Link href="#projects">
+            <Link href="#projects" className='z-50 inset-1'>
             <motion.button
               whileHover={{
                 scale: 1.1,
