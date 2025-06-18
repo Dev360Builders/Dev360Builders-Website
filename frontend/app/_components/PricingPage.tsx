@@ -380,7 +380,7 @@ const PlanPopup = ({ plan, onClose }: PlanPopupProps) => {
         "0E9EKKrJj2hudDDBG"       // Replace with your EmailJS public key
       );
       setSent(true);
-    } catch (err) {
+    } catch {
       alert("Failed to send. Please try again.");
     } finally {
       setSending(false);

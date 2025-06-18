@@ -73,7 +73,7 @@ const ProjectGrid = ({ activeCategory }: Props) => {
           transition={{ duration: 0.7 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <div
               key={project.id}
               className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col h-full"
