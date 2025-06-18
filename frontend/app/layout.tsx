@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Footer from "./_components/Footer";
 
 
 const outFit = Outfit({
@@ -50,6 +51,7 @@ export default function RootLayout({
         className={`${outFit.variable} antialiased`}
       >
         {children}
+      <Footer />
       </body>
     </html>
   );

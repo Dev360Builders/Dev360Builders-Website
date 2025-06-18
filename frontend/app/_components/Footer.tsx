@@ -161,8 +161,8 @@ const Footer = () => {
           <div className="flex space-x-6">
             {[
               { name: 'Privacy Policy', href: '/privacy' },
-              { name: 'Terms of Service', href: '/terms' },
-              { name: 'Cookie Policy', href: '/cookies' }
+              { name: 'Terms of Service', href: '/terms' }
+              // { name: 'Cookie Policy', href: '/cookies' }
             ].map((link) => (
               <motion.a
                 key={link.name}

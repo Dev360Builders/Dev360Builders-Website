@@ -24,6 +24,16 @@ const ContactInfo = () => {
       description: "+233 55 123 4567",
       link: "tel:+233557823321"
     },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.75a8.25 8.25 0 100 16.5 8.25 8.25 0 000-16.5zM12 9a3 3 0 11-3 3 3 3 0 013-3zm0 6.75a6.75 6.75 0 100-13.5 6.75 6.75 0 000 13.5z" />
+        </svg>
+      ),
+      title: "Whatsapp",
+      description: "+1 623 212 9052",
+      link: "tel:+1 623 212 9052"
+    }
     // {
     //   icon: (
     //     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

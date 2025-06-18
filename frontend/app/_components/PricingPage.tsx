@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-
+import emailjs from "@emailjs/browser";
 
 type Plan = {
   id: string;
@@ -21,11 +21,13 @@ type PricingCardProps = {
   hoveredPlan: string | null;
   setHoveredPlan: (id: string | null) => void;
   billingCycle: 'monthly' | 'annual';
+  onSelect: (plan: Plan) => void;
 };
 
 const PricingPage = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
   const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
+  const [popupPlan, setPopupPlan] = useState<Plan | null>(null);
 
   const plans = [
     {
@@ -188,9 +190,18 @@ const PricingPage = () => {
               hoveredPlan={hoveredPlan}
               setHoveredPlan={setHoveredPlan}
               billingCycle={billingCycle}
+              onSelect={setPopupPlan}
             />
           ))}
         </div>
+
+        {/* Plan Popup */}
+        {popupPlan && (
+          <PlanPopup
+            plan={popupPlan}
+            onClose={() => setPopupPlan(null)}
+          />
+        )}
 
         {/* FAQ Section */}
         <motion.div
@@ -243,6 +254,7 @@ const PricingCard = ({
   hoveredPlan,
   setHoveredPlan,
   billingCycle,
+  onSelect,
 }: PricingCardProps) => {
   return (
     <motion.div
@@ -301,6 +313,7 @@ const PricingCard = ({
                 ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                 : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
             }`}
+            onClick={() => onSelect(plan)}
           >
             {plan.cta}
           </motion.button>
@@ -333,6 +346,102 @@ const PricingCard = ({
         </div>
       </motion.div>
     </motion.div>
+  );
+};
+
+type PlanPopupProps = {
+  plan: Plan;
+  onClose: () => void;
+};
+
+const PlanPopup = ({ plan, onClose }: PlanPopupProps) => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSending(true);
+
+    try {
+      await emailjs.send(
+        "service_5sqxpy8",      // Replace with your EmailJS service ID
+        "template_bfx0s7n",     // Replace with your EmailJS template ID
+        {
+          plan: plan.name,
+          email,
+          name,
+          company,
+          message,
+        },
+        "0E9EKKrJj2hudDDBG"       // Replace with your EmailJS public key
+      );
+      setSent(true);
+    } catch (err) {
+      alert("Failed to send. Please try again.");
+    } finally {
+      setSending(false);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+      <div className="bg-white rounded-xl p-8 w-full max-w-md relative">
+        <button
+          className="absolute top-2 right-2 text-gray-500 text-2xl"
+          onClick={onClose}
+        >
+          ×
+        </button>
+        <h2 className="text-2xl font-bold mb-4">Buy {plan.name} Plan</h2>
+        {sent ? (
+          <div className="text-green-600 font-semibold">Thank you! We will contact you soon.</div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full border rounded px-3 py-2"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              required
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full border rounded px-3 py-2"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Company (optional)"
+              className="w-full border rounded px-3 py-2"
+              value={company}
+              onChange={e => setCompany(e.target.value)}
+            />
+            <textarea
+              placeholder="Additional Message"
+              className="w-full border rounded px-3 py-2"
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+              rows={3}
+            />
+            <button
+              type="submit"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold w-full"
+              disabled={sending}
+            >
+              {sending ? "Sending..." : "Submit"}
+            </button>
+          </form>
+        )}
+      </div>
+    </div>
   );
 };
 

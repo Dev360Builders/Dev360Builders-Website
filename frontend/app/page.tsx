@@ -1,6 +1,5 @@
 import AboutPage from "./_components/AboutPage";
 import ContactPage from "./_components/ContactPage";
-import Footer from "./_components/Footer";
 import Hero from "./_components/Hero";
 import Navbar from "./_components/Navbar";
 import PricingPage from "./_components/PricingPage";
@@ -19,7 +18,6 @@ export default function Home() {
       <ProjectShowcase />
       <PricingPage />
       <ContactPage />
-      <Footer />
     </div>
   );
 }

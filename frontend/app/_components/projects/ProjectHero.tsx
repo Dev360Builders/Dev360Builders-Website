@@ -60,27 +60,33 @@ const HeroProjectShowcase = () => (
     <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-blue-500 to-purple-500 blur-2xl opacity-20"></div>
     <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200">
       <div className="aspect-w-16 aspect-h-9 bg-gray-200">
-        <motion.img
-          src="/projects/mint.png"
-          alt="Project Showcase"
-          className="w-full h-full object-cover"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }} />
+        <iframe
+          src="https://99solar.vercel.app/dashboard"
+          title="99Solar Project"
+          className="w-full h-[600px] min-h-[350px] rounded-3xl border-0"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        />
       </div>
       <div className="p-8">
-        <div className="flex justify-between items-start">
+        <div className="flex justify-between items-start flex-col sm:flex-row gap-4">
           <div>
-            <h3 className="text-2xl font-bold mb-2">MintedIn</h3>
-            <p className="text-gray-600">Next.js, Node.js, Motoko, Web3</p>
+            <h3 className="text-2xl font-bold mb-2">99Solar</h3>
+            <p className="text-gray-600 mb-2">Next.js, Vercel, Tailwind CSS</p>
+            <p className="text-gray-500">
+              Automate CSV to Excel conversions, bid aggregation, and invoice generation for your Amazon bid managemnt.
+            </p>
           </div>
-          <motion.button
+          <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium"
+            href="https://99solar.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium self-start"
           >
-            View Case Study
-          </motion.button>
+            Visit
+          </motion.a>
         </div>
       </div>
     </div>
